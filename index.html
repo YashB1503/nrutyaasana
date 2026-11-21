@@ -1,0 +1,687 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>NrutyaAsana | Therapeutic yoga and dance therapy in Pune</title>
+<meta name="description" content="NrutyaAsana in Kalyaninagar, Pune: therapeutic yoga and dance therapy for PCOS, thyroid, diabetes, back pain, stress, anxiety, arthritis and women's health. Book a free consultation.">
+<meta name="theme-color" content="#2f1d13">
+
+<!-- Link preview for WhatsApp, Instagram, Facebook. Change the URLs once the site is live on its real domain. -->
+<meta property="og:type" content="website">
+<meta property="og:site_name" content="NrutyaAsana">
+<meta property="og:title" content="NrutyaAsana | Where movement becomes medicine">
+<meta property="og:description" content="Therapeutic yoga and dance therapy in Kalyaninagar, Pune. Book a free consultation.">
+<meta property="og:url" content="https://www.nrityaasana.com/">
+<meta property="og:image" content="https://www.nrityaasana.com/assets/img/og-image.jpg">
+<meta property="og:image:width" content="1200">
+<meta property="og:image:height" content="630">
+<meta property="og:image:alt" content="A classical dancer beside the words: Where movement becomes medicine">
+<meta name="twitter:card" content="summary_large_image">
+
+<link rel="icon" href="assets/icons/logo-mark.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Old+Standard+TT:ital,wght@0,400;0,700;1,400&family=Poppins:wght@400;500;600&display=swap" rel="stylesheet">
+<style>
+  /* ---------- Tokens ---------- */
+  :root {
+    --earth: #2f1d13;        /* main dark brown */
+    --earth-deep: #22120c;   /* darker band */
+    --sand: #e9d8c0;         /* sandalwood, from the dancer's costume */
+    --sand-2: #e2cdb0;       /* second light band */
+    --ink: #2f1d13;          /* text on sand */
+    --ink-soft: #6b4a33;     /* secondary text on sand */
+    --cream: #ffedd6;        /* body text on dark */
+    --muted: #c9a383;        /* quiet accents on dark */
+    --gold: #edad5f;         /* actions only: buttons */
+    --gold-hover: #f6c27f;
+
+    --serif: "Old Standard TT", "Century Schoolbook", Georgia, serif;
+    --sans: "Poppins", system-ui, -apple-system, "Segoe UI", sans-serif;
+
+    --wrap: 1080px;
+    --gutter: clamp(16px, 5vw, 48px);
+    --band: clamp(72px, 10vw, 128px);
+    --bar: 0px;              /* height of the phone action bar */
+  }
+
+  *, *::before, *::after { box-sizing: border-box; }
+  html { scroll-behavior: smooth; scroll-padding-top: 16px; }
+  body {
+    margin: 0;
+    padding-bottom: var(--bar);
+    background: var(--earth);
+    color: var(--cream);
+    font-family: var(--sans);
+    font-weight: 400;
+    font-size: clamp(15px, .9vw + 10px, 17px);
+    line-height: 1.7;
+    -webkit-font-smoothing: antialiased;
+  }
+  img { display: block; max-width: 100%; }
+  a { color: inherit; }
+  :focus-visible { outline: 2px solid var(--gold); outline-offset: 4px; border-radius: 2px; }
+  .wrap { width: min(100% - 2 * var(--gutter), var(--wrap)); margin-inline: auto; }
+  .visually-hidden { position: absolute; width: 1px; height: 1px; overflow: hidden; clip: rect(0 0 0 0); white-space: nowrap; }
+
+  .skip { position: absolute; left: 16px; top: -60px; z-index: 100; background: var(--gold); color: var(--ink); padding: 10px 16px; font-weight: 500; text-decoration: none; }
+  .skip:focus { top: 16px; }
+
+  /* ---------- Buttons (the only place gold appears) ---------- */
+  .button {
+    display: inline-flex; align-items: center; justify-content: center; gap: 10px;
+    min-height: 48px; padding: 12px 26px;
+    font: 500 15px/1.2 var(--sans);
+    color: var(--ink); background: var(--gold);
+    text-decoration: none; border: 0; cursor: pointer;
+    clip-path: polygon(10px 0, calc(100% - 10px) 0, 100% 10px, 100% calc(100% - 10px), calc(100% - 10px) 100%, 10px 100%, 0 calc(100% - 10px), 0 10px);
+    transition: background-color .2s;
+  }
+  .button:hover { background: var(--gold-hover); }
+  .button svg { width: 18px; height: 18px; flex: none; }
+  .button--ghost { background: transparent; color: var(--cream); box-shadow: inset 0 0 0 1px rgba(255, 237, 214, .45); clip-path: none; }
+  .button--ghost:hover { background: rgba(255, 237, 214, .08); }
+  .actions { display: flex; flex-wrap: wrap; gap: 12px; }
+
+  /* ---------- Bands ---------- */
+  .band { position: relative; isolation: isolate; padding-block: var(--band); overflow: hidden; background: var(--earth); }
+  .band::before {
+    content: ""; position: absolute; inset: 0; z-index: -1;
+    background: url("assets/img/texture-wide.jpg") center / cover no-repeat;
+    mix-blend-mode: screen; opacity: .22; pointer-events: none;
+  }
+  .band--deep { background: var(--earth-deep); }
+  .band--deep::before { background-image: url("assets/img/texture-tall.jpg"); opacity: .2; }
+  .band--sand { background: var(--sand); color: var(--ink); }
+  .band--sand-2 { background: var(--sand-2); color: var(--ink); }
+  .band--sand::before, .band--sand-2::before { display: none; }
+
+  /* ---------- Headings ---------- */
+  .heading {
+    position: relative;
+    margin: 0 0 .45em;
+    text-align: center;
+    font-family: var(--serif);
+    font-weight: 400;
+    font-size: clamp(32px, 3vw + 16px, 52px);
+    line-height: 1.1;
+    color: #fff;
+  }
+  .heading::before {
+    content: ""; position: absolute; z-index: -1; left: 50%; top: 50%;
+    width: 2.6em; height: 2.6em; translate: -50% -50%;
+    background: var(--wm, none) center / contain no-repeat;
+  }
+  .band--sand .heading, .band--sand-2 .heading { color: var(--ink); }
+  .intro { max-width: 30em; margin: 0 auto; text-align: center; text-wrap: balance; }
+  .band--sand .intro, .band--sand-2 .intro { color: var(--ink-soft); }
+
+  /* ---------- Top bar ---------- */
+  .topbar { position: absolute; inset: 0 0 auto; z-index: 10; padding-block: 20px; }
+  .topbar .wrap { display: flex; align-items: center; justify-content: space-between; gap: 24px; }
+  .brand { display: flex; align-items: center; gap: 10px; text-decoration: none; }
+  .brand img { width: 34px; height: 34px; }
+  .brand span { font-family: var(--serif); font-size: 19px; letter-spacing: .14em; color: var(--sand); }
+  .nav { display: flex; gap: clamp(16px, 2.4vw, 32px); list-style: none; margin: 0; padding: 0; }
+  .nav a { text-decoration: none; font-size: 14px; color: var(--cream); padding-block: 6px; border-bottom: 1px solid transparent; transition: border-color .2s; }
+  .nav a:hover { border-bottom-color: var(--muted); }
+
+  /* ---------- 1. Hero ---------- */
+  .hero { padding-block: 0; min-height: min(100svh, 820px); display: flex; }
+  .hero .wrap { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1fr); align-items: end; gap: 24px; }
+  .dancer { position: relative; width: min(100%, 500px); aspect-ratio: 710 / 758; margin-top: 96px; }
+  .dancer .ring { position: absolute; left: 7.8%; top: -5.5%; width: 84.4%; opacity: .75; }
+  .dancer .figure { position: absolute; inset: 0; width: 100%; height: 100%; object-fit: contain; object-position: bottom; }
+  .hero-copy { align-self: center; padding-block: 120px 64px; text-align: right; }
+  .hero h1 {
+    margin: 0 0 .5em;
+    font-family: var(--serif); font-weight: 700;
+    font-size: clamp(34px, 3.4vw + 10px, 62px); line-height: 1.1;
+    color: var(--cream);
+  }
+  .hero h1 span { display: block; white-space: nowrap; }
+  .hero .lede { margin: 0 0 32px auto; max-width: 18em; font-size: clamp(16px, .7vw + 12px, 20px); color: var(--cream); line-height: 1.5; }
+  .hero .actions { justify-content: flex-end; }
+
+  @media (prefers-reduced-motion: no-preference) {
+    .dancer .ring   { animation: ring-in 1.6s cubic-bezier(.2,.7,.2,1) both; }
+    .dancer .figure { animation: rise 1.2s .15s cubic-bezier(.2,.7,.2,1) both; }
+    .hero h1 span   { animation: rise 1s cubic-bezier(.2,.7,.2,1) both; }
+    .hero h1 span:nth-child(2) { animation-delay: .15s; }
+    .hero .lede, .hero .actions { animation: fade 1s .6s both; }
+  }
+  @keyframes ring-in { from { opacity: 0; rotate: -40deg; scale: .92; } }
+  @keyframes rise    { from { opacity: 0; translate: 0 24px; } }
+  @keyframes fade    { from { opacity: 0; } }
+
+  /* ---------- 2. One pose, two traditions ---------- */
+  .pose .heading { --wm: url("assets/icons/lotus-small.svg"); }
+  .pose .heading::before { width: 4em; height: 2.4em; opacity: .8; }
+  .pose-figure {
+    display: grid;
+    grid-template-columns: minmax(0, 1fr) minmax(240px, 400px) minmax(0, 1fr);
+    gap: clamp(16px, 3vw, 40px);
+    align-items: stretch;
+    margin-top: clamp(40px, 6vw, 72px);
+  }
+  .pose-figure img { width: 100%; height: auto; }
+  .notes { display: grid; grid-template-rows: auto 1fr 1fr 1fr; margin: 0; padding: 0; list-style: none; }
+  .notes h3 { margin: 0 0 12px; font-family: var(--serif); font-style: italic; font-weight: 400; font-size: clamp(22px, 1.2vw + 14px, 28px); color: var(--sand); }
+  .notes li { position: relative; align-self: center; padding-block: 8px; }
+  .notes strong { display: block; font-weight: 500; color: #fff; }
+  .notes p { margin: 2px 0 0; color: var(--muted); font-size: .95em; line-height: 1.55; }
+  .notes li::after {
+    content: ""; position: absolute; top: 22px; width: clamp(16px, 3vw, 44px); height: 1px; background: rgba(201, 163, 131, .5);
+  }
+  .notes li:first-child::after { display: none; }
+  .notes--dance { text-align: right; }
+  .notes--dance li { padding-right: clamp(24px, 4vw, 56px); }
+  .notes--dance li::after { right: 0; }
+  .notes--yoga li { padding-left: clamp(24px, 4vw, 56px); }
+  .notes--yoga li::after { left: 0; }
+  .pose-caption { max-width: 34em; margin: clamp(32px, 5vw, 56px) auto 0; text-align: center; color: var(--cream); text-wrap: balance; }
+
+  /* ---------- 3. Philosophy ---------- */
+  .philosophy .heading { --wm: url("assets/icons/wm-spiral.svg"); }
+  .philosophy-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.05fr); gap: clamp(32px, 5vw, 72px); align-items: center; margin-top: clamp(40px, 6vw, 72px); }
+  .philosophy-grid p { margin: 0 0 1.1em; max-width: 34em; }
+  .philosophy-grid p:last-child { margin-bottom: 0; }
+  .frame-swirl {
+    padding: 18px;
+    background:
+      url("assets/icons/swirl.svg") left top / 14px no-repeat, url("assets/icons/swirl.svg") right top / 14px no-repeat,
+      url("assets/icons/swirl.svg") left bottom / 14px no-repeat, url("assets/icons/swirl.svg") right bottom / 14px no-repeat;
+  }
+  .frame-swirl img { width: 100%; aspect-ratio: 499 / 359; object-fit: cover; clip-path: polygon(5% 0, 95% 0, 100% 6%, 100% 94%, 95% 100%, 5% 100%, 0 94%, 0 6%); }
+
+  /* ---------- 4. Why NrutyaAsana ---------- */
+  .why .heading { --wm: url("assets/icons/wm-ring.svg"); }
+  .reasons { display: flex; justify-content: center; align-items: flex-start; gap: clamp(12px, 2vw, 28px); list-style: none; padding: 0; margin: clamp(48px, 7vw, 80px) 0 0; }
+  .reasons li { flex: 1 1 0; max-width: 190px; text-align: center; position: relative; }
+  .reasons li + li::before {
+    content: ""; position: absolute; left: calc(-1 * clamp(12px, 2vw, 28px) / 2 - 3px);
+    width: 6px; height: 110%; top: -12%;
+    background: url("assets/icons/wave.svg") center / contain no-repeat; opacity: .5;
+  }
+  .reasons li:nth-child(odd) + li::before { top: 18%; }
+  .tile {
+    padding: 9px; margin-bottom: 16px;
+    --d: radial-gradient(circle, var(--muted) 0 2.5px, transparent 3px);
+    background: var(--d) left top / 8px 8px no-repeat, var(--d) right top / 8px 8px no-repeat, var(--d) left bottom / 8px 8px no-repeat, var(--d) right bottom / 8px 8px no-repeat;
+  }
+  .tile img { width: 100%; aspect-ratio: 195 / 221; object-fit: cover; clip-path: polygon(9% 0, 91% 0, 100% 8%, 100% 92%, 91% 100%, 9% 100%, 0 92%, 0 8%); }
+  .reasons span { display: block; font-size: .95em; }
+
+  /* ---------- 5. Programs (light) ---------- */
+  .conditions {
+    display: grid; grid-template-columns: repeat(4, minmax(0, 1fr)); gap: 12px;
+    list-style: none; padding: 0; margin: clamp(40px, 6vw, 64px) auto 0; max-width: 900px;
+  }
+  .condition {
+    width: 100%; height: 100%;
+    display: flex; flex-direction: column; align-items: center; gap: 10px;
+    padding: 18px 8px 16px;
+    font: 500 15px/1.3 var(--sans); color: var(--ink);
+    background: transparent; border: 0; cursor: pointer;
+    clip-path: polygon(12px 0, calc(100% - 12px) 0, 100% 12px, 100% calc(100% - 12px), calc(100% - 12px) 100%, 12px 100%, 0 calc(100% - 12px), 0 12px);
+    transition: background-color .2s;
+  }
+  .condition img { width: clamp(60px, 6vw, 76px); }
+  .condition:hover { background: rgba(47, 29, 19, .06); }
+  .condition[aria-expanded="true"] { background: var(--earth); color: var(--cream); }
+  .condition .ic-light, .condition[aria-expanded="true"] .ic-dark { display: none; }
+  .condition[aria-expanded="true"] .ic-light { display: block; }
+  .program-panel {
+    max-width: 900px; margin: 16px auto 0;
+    padding: clamp(24px, 4vw, 40px);
+    background: var(--earth); color: var(--cream);
+    display: grid; grid-template-columns: minmax(0, 1.4fr) minmax(0, 1fr); gap: 24px 48px; align-items: end;
+    clip-path: polygon(16px 0, calc(100% - 16px) 0, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 16px), 0 16px);
+  }
+  .program-panel h3 { margin: 0 0 8px; font-family: var(--serif); font-weight: 400; font-size: clamp(26px, 1.6vw + 16px, 36px); line-height: 1.15; color: #fff; }
+  .program-panel p { margin: 0 0 10px; }
+  .program-panel .includes { color: var(--muted); }
+  .program-panel .length { margin: 0; font-weight: 500; color: var(--sand); }
+  .program-panel .button { justify-self: end; }
+  .program-panel.is-changing > * { animation: fade .35s both; }
+  .disclaimer { max-width: 900px; margin: 20px auto 0; text-align: center; font-size: 14px; color: var(--ink-soft); }
+
+  /* ---------- 6. Student stories (light) ---------- */
+  .stories { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 56px); list-style: none; padding: 0; margin: clamp(40px, 6vw, 64px) 0 0; }
+  .stories figure { margin: 0; }
+  .stories blockquote { margin: 0 0 18px; font-family: var(--serif); font-style: italic; font-size: clamp(19px, .8vw + 14px, 23px); line-height: 1.5; color: var(--ink); }
+  .stories blockquote::before { content: "\201C"; display: block; height: .55em; font-size: 2.6em; line-height: 1; color: #b0835d; font-style: normal; }
+  .stories figcaption { font-size: 14px; color: var(--ink-soft); }
+  .stories figcaption strong { display: block; font-weight: 500; color: var(--ink); }
+
+  /* ---------- 7. Founders ---------- */
+  .founders .heading { --wm: url("assets/icons/wm-meditate.svg"); }
+  .founder-list { display: grid; grid-template-columns: repeat(2, minmax(0, 1fr)); gap: 48px; list-style: none; padding: 0; margin: clamp(48px, 7vw, 80px) 0 0; text-align: center; }
+  .portrait { position: relative; width: clamp(170px, 18vw, 220px); aspect-ratio: 1; margin: 0 auto 22px; }
+  .portrait .ring-bg { position: absolute; inset: 0; width: 100%; }
+  .portrait .photo { position: absolute; left: 13.1%; top: 13.1%; width: 73.8%; height: 73.8%; border-radius: 50%; object-fit: cover; }
+  .founder-list h3 { margin: 0 0 6px; font-family: var(--serif); font-weight: 400; font-size: clamp(24px, 1vw + 18px, 30px); color: #fff; }
+  .founder-list p { margin: 0; color: var(--muted); line-height: 1.6; }
+  .together { margin: clamp(56px, 8vw, 88px) auto 0; max-width: 40em; text-align: center; }
+  .together h3 { margin: 0; font-weight: 500; font-size: clamp(18px, .6vw + 14px, 21px); color: #fff; }
+  .together h3::after { content: ""; display: block; width: 72px; height: 2px; margin: 14px auto 18px; background: #8e5a38; }
+  .together p { margin: 0; }
+
+  /* ---------- 8. First visit ---------- */
+  .steps { display: grid; grid-template-columns: repeat(3, minmax(0, 1fr)); gap: clamp(24px, 4vw, 48px); list-style: none; padding: 0; margin: clamp(40px, 6vw, 64px) 0 0; counter-reset: step; }
+  .steps li { position: relative; counter-increment: step; padding-top: 8px; }
+  .steps li::before { content: counter(step); display: block; font-family: var(--serif); font-size: 64px; line-height: 1; color: var(--muted); margin-bottom: 14px; }
+  .steps li:not(:last-child)::after { content: ""; position: absolute; top: 44px; left: 56px; right: calc(-1 * clamp(24px, 4vw, 48px) + 8px); height: 1px; background: rgba(201, 163, 131, .35); }
+  .steps h3 { margin: 0 0 6px; font-weight: 500; font-size: 18px; color: #fff; }
+  .steps p { margin: 0; color: var(--cream); }
+  .steps-cta { margin: clamp(40px, 6vw, 56px) 0 0; text-align: center; }
+
+  /* ---------- 9. Timetable ---------- */
+  .timetable { width: 100%; max-width: 900px; margin: clamp(40px, 6vw, 64px) auto 0; border-collapse: collapse; }
+  .timetable th, .timetable td { text-align: left; padding: 16px 12px; border-bottom: 1px solid rgba(201, 163, 131, .22); vertical-align: top; }
+  .timetable thead th { font-weight: 500; font-size: 14px; color: var(--muted); border-bottom-color: rgba(201, 163, 131, .45); }
+  .timetable tbody th { font-weight: 500; color: #fff; }
+  .timetable td { color: var(--cream); white-space: nowrap; }
+  .timetable-note { max-width: 900px; margin: 20px auto 0; color: var(--muted); font-size: 14px; text-align: center; }
+
+  /* ---------- 10. Contact ---------- */
+  .contact .heading { --wm: url("assets/icons/lotus-small.svg"); }
+  .contact .heading::before { width: 3.6em; height: 2.2em; }
+  .contact .actions { justify-content: center; margin-top: 28px; }
+  .contact-grid { display: grid; grid-template-columns: minmax(0, 1fr) minmax(0, 1.15fr); gap: clamp(32px, 5vw, 64px); margin-top: clamp(56px, 8vw, 88px); align-items: start; }
+  .contact h3 { margin: 0 0 18px; font-family: var(--serif); font-weight: 400; font-size: 26px; color: #fff; }
+  .contact address { font-style: normal; }
+  .contact-list { list-style: none; margin: 0; padding: 0; display: grid; gap: 14px; }
+  .contact-list li { display: flex; align-items: center; gap: 14px; }
+  .contact-list img { width: 30px; height: 30px; flex: none; }
+  .contact-list a { text-decoration: none; border-bottom: 1px solid rgba(201, 163, 131, .4); }
+  .contact-list .nowrap { white-space: nowrap; }
+  .contact-list a:hover { border-bottom-color: var(--cream); }
+  .hours { margin: 0; display: grid; grid-template-columns: auto 1fr; gap: 6px 20px; }
+  .contact .hours-title { margin-top: 40px; }
+  .hours dt { color: var(--muted); }
+  .hours dd { margin: 0; }
+  .map { position: relative; aspect-ratio: 4 / 3; background: var(--earth-deep); clip-path: polygon(16px 0, calc(100% - 16px) 0, 100% 16px, 100% calc(100% - 16px), calc(100% - 16px) 100%, 16px 100%, 0 calc(100% - 16px), 0 16px); }
+  .map iframe { position: absolute; inset: 0; width: 100%; height: 100%; border: 0; filter: sepia(.25) saturate(.85); }
+  .map-link { display: inline-block; margin-top: 12px; font-size: 14px; color: var(--cream); }
+  .signature { display: flex; flex-direction: column; align-items: center; text-align: center; margin-top: clamp(64px, 9vw, 104px); }
+  .signature img { width: clamp(110px, 12vw, 150px); }
+  .signature p { margin: 14px 0 0; font-family: var(--serif); font-size: clamp(30px, 2.6vw, 40px); letter-spacing: .14em; line-height: 1; color: #f6e3e3; padding-left: .14em; }
+  .signature ul { display: flex; gap: 14px; list-style: none; padding: 0; margin: 10px 0 0; color: var(--muted); font-size: 15px; }
+  .signature li + li::before { content: "\2022"; margin-right: 14px; }
+  .fineprint { margin: 40px 0 0; font-size: 13px; color: rgba(255, 237, 214, .55); text-align: center; }
+
+  /* ---------- Phone action bar ---------- */
+  .actionbar { display: none; }
+
+  /* ---------- Tablet and phone ---------- */
+  @media (max-width: 860px) {
+    :root { --bar: calc(64px + env(safe-area-inset-bottom)); }
+    .nav { display: none; }
+    .hero { min-height: auto; }
+    .hero .wrap { grid-template-columns: 1fr; gap: 0; }
+    .hero-copy { order: -1; text-align: center; padding: 104px 0 0; position: relative; z-index: 2; }
+    .hero .lede { margin-inline: auto; margin-bottom: 24px; }
+    .hero .actions { justify-content: center; }
+    .dancer { width: min(108%, 520px); justify-self: center; margin-top: -8px; }
+    .pose-figure { grid-template-columns: 1fr 1fr; }
+    .pose-figure > img { grid-column: 1 / -1; grid-row: 1; width: min(80%, 360px); margin: 0 auto; }
+    .notes { grid-template-rows: auto; gap: 4px; align-content: start; }
+    .notes--dance { text-align: left; }
+    .notes--dance li, .notes--yoga li { padding: 8px 0 8px 18px; }
+    .notes li::after { left: 0; right: auto; top: 20px; width: 8px; }
+    .philosophy-grid { grid-template-columns: 1fr; }
+    .philosophy-grid { max-width: 38em; margin-inline: auto; }
+    .reasons { flex-wrap: wrap; row-gap: 32px; }
+    .reasons li { flex: 0 0 calc(50% - 14px); max-width: 220px; }
+    .reasons li::before { display: none; }
+    .program-panel { grid-template-columns: 1fr; }
+    .program-panel .button { justify-self: start; }
+    .stories { grid-template-columns: 1fr; max-width: 34em; margin-inline: auto; }
+    .steps { grid-template-columns: 1fr; max-width: 30em; margin-inline: auto; }
+    .steps li { display: grid; grid-template-columns: 56px 1fr; column-gap: 12px; }
+    .steps li::before { grid-row: span 2; font-size: 48px; margin: 0; }
+    .steps li:not(:last-child)::after { display: none; }
+    .contact-grid { grid-template-columns: 1fr; }
+
+    .actionbar {
+      position: fixed; inset: auto 0 0; z-index: 50;
+      display: grid; grid-template-columns: repeat(3, 1fr);
+      padding-bottom: env(safe-area-inset-bottom);
+      background: rgba(34, 18, 12, .96);
+      border-top: 1px solid rgba(201, 163, 131, .3);
+    }
+    .actionbar a { display: flex; flex-direction: column; align-items: center; justify-content: center; gap: 2px; height: 64px; font-size: 12px; font-weight: 500; text-decoration: none; color: var(--cream); }
+    .actionbar a + a { border-left: 1px solid rgba(201, 163, 131, .18); }
+    .actionbar svg { width: 22px; height: 22px; }
+    .actionbar .is-primary { background: var(--gold); color: var(--ink); }
+  }
+  @media (max-width: 560px) {
+    .pose-figure { grid-template-columns: 1fr; }
+    .founder-list { grid-template-columns: 1fr; gap: 56px; }
+    .conditions { grid-template-columns: repeat(2, minmax(0, 1fr)); }
+    .hero .actions .button { flex: 1 1 100%; }
+    .timetable thead { display: none; }
+    .timetable, .timetable tbody, .timetable tr, .timetable th, .timetable td { display: block; }
+    .timetable tr { padding: 14px 0; border-bottom: 1px solid rgba(201, 163, 131, .22); }
+    .timetable th, .timetable td { border: 0; padding: 2px 0; white-space: normal; }
+    .timetable tbody th { font-size: 17px; margin-bottom: 4px; }
+    .timetable td::before { content: attr(data-label) ": "; color: var(--muted); }
+    .contact-list li { align-items: flex-start; }
+    .contact-list span, .contact-list a { overflow-wrap: anywhere; }
+  }
+  @media (max-width: 380px) {
+    .contact-list { font-size: 14px; }
+    .contact-list li { gap: 10px; }
+    .contact-list img { width: 26px; height: 26px; }
+  }
+</style>
+</head>
+<body>
+<a class="skip" href="#pose">Skip to content</a>
+
+<!-- Re-usable icons -->
+<svg width="0" height="0" style="position:absolute" aria-hidden="true">
+  <symbol id="i-wa" viewBox="0 0 24 24"><path fill="currentColor" d="M12 2a10 10 0 0 0-8.6 15.1L2 22l5-1.3A10 10 0 1 0 12 2Zm0 18.2c-1.6 0-3.1-.4-4.4-1.2l-.3-.2-3 .8.8-2.9-.2-.3A8.2 8.2 0 1 1 12 20.2Zm4.5-6.1c-.2-.1-1.5-.7-1.7-.8-.2-.1-.4-.1-.6.1l-.8 1c-.1.2-.3.2-.5.1a6.7 6.7 0 0 1-3.3-2.9c-.2-.4.2-.4.7-1.3.1-.2 0-.3 0-.4l-.8-1.8c-.2-.5-.4-.4-.6-.4h-.5c-.2 0-.4.1-.7.3-.2.3-.9.9-.9 2.2s.9 2.5 1 2.7c.1.2 1.8 2.8 4.4 3.9 1.6.7 2.3.8 3.1.6.5-.1 1.5-.6 1.7-1.2.2-.6.2-1.1.2-1.2-.1-.1-.3-.2-.5-.3Z"/></symbol>
+  <symbol id="i-phone" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" stroke-linejoin="round" d="M5 3.5h3.2l1.6 4-2 1.3a11 11 0 0 0 5.4 5.4l1.3-2 4 1.6V17a2 2 0 0 1-2.2 2A15.5 15.5 0 0 1 3 5.7 2 2 0 0 1 5 3.5Z"/></symbol>
+  <symbol id="i-pin" viewBox="0 0 24 24"><path fill="none" stroke="currentColor" stroke-width="1.6" d="M12 21s-6.5-5.6-6.5-11a6.5 6.5 0 0 1 13 0c0 5.4-6.5 11-6.5 11Z"/><circle cx="12" cy="10" r="2.3" fill="none" stroke="currentColor" stroke-width="1.6"/></symbol>
+</svg>
+
+<header class="topbar">
+  <div class="wrap">
+    <a class="brand" href="#top" aria-label="NrutyaAsana home">
+      <img src="assets/icons/logo-mark-white.svg" alt="">
+      <span>NrutyaAsana</span>
+    </a>
+    <nav aria-label="Main">
+      <ul class="nav">
+        <li><a href="#programs">Programs</a></li>
+        <li><a href="#timetable">Timetable</a></li>
+        <li><a href="#founders">Founders</a></li>
+        <li><a href="#contact">Contact</a></li>
+      </ul>
+    </nav>
+  </div>
+</header>
+
+<main id="top">
+  <!-- 1. Hero -->
+  <section class="band hero" aria-labelledby="hero-title">
+    <div class="wrap">
+      <div class="dancer">
+        <img class="ring" src="assets/icons/hero-ring.svg" alt="">
+        <img class="figure" src="assets/img/dancer.webp" alt="A classical dancer balancing on one leg, one arm raised in a mudra" width="710" height="758" fetchpriority="high">
+      </div>
+      <div class="hero-copy">
+        <h1 id="hero-title"><span>Where Movement</span><span>Becomes Medicine</span></h1>
+        <p class="lede">A beautiful blend of graceful dance and mindful yoga.</p>
+        <div class="actions">
+          <a class="button" href="https://wa.me/919823203407?text=Hi%20NrutyaAsana%2C%20I%27d%20like%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener">
+            <svg aria-hidden="true"><use href="#i-wa"/></svg>Book a free consultation
+          </a>
+          <a class="button button--ghost" href="tel:+919823203407">
+            <svg aria-hidden="true"><use href="#i-phone"/></svg>Call +91 98232 03407
+          </a>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 2. One pose, two traditions -->
+  <section class="band band--deep pose" id="pose" aria-labelledby="pose-title">
+    <div class="wrap">
+      <h2 class="heading" id="pose-title">One pose, two traditions</h2>
+      <p class="intro">This pose comes from Nataraja, the Lord of Dance. Dancers take it to express rhythm. In yoga, Natarajasana carries his name and builds balance. We teach both, together.</p>
+      <div class="pose-figure">
+        <ul class="notes notes--dance">
+          <li><h3>In dance</h3></li>
+          <li><strong>Mudra</strong><p>The raised hand gesture carries meaning and feeling.</p></li>
+          <li><strong>Expression</strong><p>The eyes and face tell the story.</p></li>
+          <li><strong>Rhythm</strong><p>The ankle bells mark every beat.</p></li>
+        </ul>
+        <img src="assets/img/dancer-outline.webp" alt="A gold line drawing of the same dancer, balanced on one leg" width="710" height="758" loading="lazy">
+        <ul class="notes notes--yoga">
+          <li><h3>In yoga</h3></li>
+          <li><strong>Focus</strong><p>A steady gaze calms a busy mind.</p></li>
+          <li><strong>Strength</strong><p>The core and standing leg hold you up.</p></li>
+          <li><strong>Balance</strong><p>Standing on one foot builds steadiness, on the mat and off it.</p></li>
+        </ul>
+      </div>
+      <p class="pose-caption">That meeting point, where expression and discipline share one body, is what NrutyaAsana is built on.</p>
+    </div>
+  </section>
+
+  <!-- 3. Philosophy -->
+  <section class="band philosophy" id="philosophy" aria-labelledby="philosophy-title">
+    <div class="wrap">
+      <h2 class="heading" id="philosophy-title">Our philosophy</h2>
+      <div class="philosophy-grid">
+        <div>
+          <p>At NrutyaAsana, we believe in the sacred union of Yoga and Nrutya.</p>
+          <p>Our approach is therapeutic, holistic, and deeply rooted in ancient wisdom, yet thoughtfully designed for today's needs, empowering individuals to restore balance, awaken inner strength, and embrace complete well-being.</p>
+          <p>Through mindful movement, conscious breathing, expressive dance, and personalized therapeutic guidance, we nurture harmony of the body, mind, and spirit, creating a transformative journey toward lasting health, resilience, and inner peace.</p>
+        </div>
+        <div class="frame-swirl">
+          <img src="assets/img/philosophy-yoga.jpg" alt="A woman holding a high lunge with arms raised in a sunlit room" width="499" height="359" loading="lazy">
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- 4. Why NrutyaAsana -->
+  <section class="band band--deep why" id="why" aria-labelledby="why-title">
+    <div class="wrap">
+      <h2 class="heading" id="why-title">Why NrutyaAsana</h2>
+      <p class="intro">A unique harmony of movement, therapy &amp; tradition</p>
+      <ul class="reasons">
+        <li><div class="tile"><img src="assets/img/dance-therapy.jpg" alt="Two people practising dance movements with arms raised" width="196" height="222" loading="lazy"></div><span>Dance Therapy</span></li>
+        <li><div class="tile"><img src="assets/img/ancient-wisdom.jpg" alt="A woman with palms joined above her head in front of mountains" width="194" height="221" loading="lazy"></div><span>Ancient Wisdom</span></li>
+        <li><div class="tile"><img src="assets/img/modern-therapy.jpg" alt="A group seated cross-legged in a bright yoga studio" width="194" height="221" loading="lazy"></div><span>Modern Therapy</span></li>
+        <li><div class="tile"><img src="assets/img/personalized.jpg" alt="A therapist guiding a client through an exercise on a foam roller" width="194" height="221" loading="lazy"></div><span>Personalized</span></li>
+        <li><div class="tile"><img src="assets/img/holistic-healing.jpg" alt="A woman lying at rest while a healer holds hands above her" width="195" height="221" loading="lazy"></div><span>Holistic Healing</span></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 5. Programs (SAMPLE TEXT: replace the program details in the script at the bottom) -->
+  <section class="band band--sand programs" id="programs" aria-labelledby="programs-title">
+    <div class="wrap">
+      <h2 class="heading" id="programs-title">What we offer</h2>
+      <p class="intro">Therapeutic yoga &amp; dance therapy programs for these conditions. Tap one to see what it includes.</p>
+      <ul class="conditions">
+        <li><button class="condition" type="button" data-program="pcos" aria-expanded="true" aria-controls="program-panel"><img class="ic-dark" src="assets/icons/of-pcos-dark.svg" alt=""><img class="ic-light" src="assets/icons/of-pcos.svg" alt="">PCOS</button></li>
+        <li><button class="condition" type="button" data-program="thyroid" aria-expanded="false" aria-controls="program-panel"><img class="ic-dark" src="assets/icons/of-thyroid-dark.svg" alt=""><img class="ic-light" src="assets/icons/of-thyroid.svg" alt="">Thyroid</button></li>
+        <li><button class="condition" type="button" data-program="diabetes" aria-expanded="false" aria-controls="program-panel"><img class="ic-dark" src="assets/icons/of-diabetes-dark.svg" alt=""><img class="ic-light" src="assets/icons/of-diabetes.svg" alt="">Diabetes</button></li>
+        <li><button class="condition" type="button" data-program="backpain" aria-expanded="false" aria-controls="program-panel"><img class="ic-dark" src="assets/icons/of-backpain-dark.svg" alt=""><img class="ic-light" src="assets/icons/of-backpain.svg" alt="">Back Pain</button></li>
+        <li><button class="condition" type="button" data-program="stress" aria-expanded="false" aria-controls="program-panel"><img class="ic-dark" src="assets/icons/of-stress-dark.svg" alt=""><img class="ic-light" src="assets/icons/of-stress.svg" alt="">Stress Management</button></li>
+        <li><button class="condition" type="button" data-program="anxiety" aria-expanded="false" aria-controls="program-panel"><img class="ic-dark" src="assets/icons/of-anxiety-dark.svg" alt=""><img class="ic-light" src="assets/icons/of-anxiety.svg" alt="">Anxiety</button></li>
+        <li><button class="condition" type="button" data-program="arthritis" aria-expanded="false" aria-controls="program-panel"><img class="ic-dark" src="assets/icons/of-arthritis-dark.svg" alt=""><img class="ic-light" src="assets/icons/of-arthritis.svg" alt="">Arthritis</button></li>
+        <li><button class="condition" type="button" data-program="women" aria-expanded="false" aria-controls="program-panel"><img class="ic-dark" src="assets/icons/of-women-dark.svg" alt=""><img class="ic-light" src="assets/icons/of-women.svg" alt="">Women's Health</button></li>
+      </ul>
+      <div class="program-panel" id="program-panel" aria-live="polite">
+        <div>
+          <h3 data-field="name">PCOS</h3>
+          <p data-field="summary">Gentle, hormone-friendly yoga, breathwork and dance movement to support regular cycles, steady energy and a calmer mood.</p>
+          <p class="includes" data-field="includes">Includes hip-opening asanas, pranayama, rhythmic dance sequences and lifestyle guidance.</p>
+          <p class="length" data-field="length">Runs for 8 weeks, 3 sessions a week.</p>
+        </div>
+        <a class="button" data-field="cta" href="https://wa.me/919823203407?text=Hi%20NrutyaAsana%2C%20I%27d%20like%20to%20know%20about%20your%20PCOS%20program." target="_blank" rel="noopener">
+          <svg aria-hidden="true"><use href="#i-wa"/></svg><span>Ask about PCOS on WhatsApp</span>
+        </a>
+      </div>
+      <p class="disclaimer">Our programs support, not replace, your doctor's treatment.</p>
+    </div>
+  </section>
+
+  <!-- 6. Student stories (SAMPLE: replace with real students, with their permission) -->
+  <section class="band band--sand-2 stories-band" aria-labelledby="stories-title">
+    <div class="wrap">
+      <h2 class="heading" id="stories-title">What our students say</h2>
+      <ul class="stories">
+        <li><figure>
+          <blockquote>After two months my cycles became regular again, and I actually look forward to every class.</blockquote>
+          <figcaption><strong>[Student name], 31</strong>PCOS program</figcaption>
+        </figure></li>
+        <li><figure>
+          <blockquote>I came for my back pain and stayed for the dance. I move without fear now.</blockquote>
+          <figcaption><strong>[Student name], 46</strong>Back pain program</figcaption>
+        </figure></li>
+        <li><figure>
+          <blockquote>The breathing practices changed my evenings. I sleep better than I have in years.</blockquote>
+          <figcaption><strong>[Student name], 38</strong>Stress management</figcaption>
+        </figure></li>
+      </ul>
+    </div>
+  </section>
+
+  <!-- 7. Founders -->
+  <section class="band band--deep founders" id="founders" aria-labelledby="founders-title">
+    <div class="wrap">
+      <h2 class="heading" id="founders-title">Meet the founders</h2>
+      <ul class="founder-list">
+        <li>
+          <div class="portrait">
+            <img class="ring-bg" src="assets/icons/founder-ring.svg" alt="">
+            <img class="photo" src="assets/img/shweta-vaikunthe.jpg" alt="Portrait of Shweta Vaikunthe" width="157" height="157" loading="lazy">
+          </div>
+          <h3>Shweta Vaikunthe</h3>
+          <p>Yogaratna | Yoga Master |<br>Consultant Yoga Therapist |<br>20+ Years Experience</p>
+        </li>
+        <li>
+          <div class="portrait">
+            <img class="ring-bg" src="assets/icons/founder-ring.svg" alt="">
+            <img class="photo" src="assets/img/aarti-kedari.jpg" alt="Portrait of Aarti Kedari" width="157" height="157" loading="lazy">
+          </div>
+          <h3>Aarti Kedari</h3>
+          <p>Dance Therapist |<br>Master of Dance Forms |<br>20+ Years Experience</p>
+        </li>
+      </ul>
+      <div class="together">
+        <h3>Together, we created Nrutyaasan</h3>
+        <p>A <span lang="hi">संस्थान</span> that fuses the precision of yoga therapy with the flow of dance therapy.<br>We don’t teach fitness. We restore balance.</p>
+      </div>
+    </div>
+  </section>
+
+  <!-- 8. First visit (SAMPLE: confirm the consultation length) -->
+  <section class="band first-visit" aria-labelledby="visit-title">
+    <div class="wrap">
+      <h2 class="heading" id="visit-title">Your first visit</h2>
+      <p class="intro">New to yoga or dance? You don't need any experience. Here's how it works.</p>
+      <ol class="steps">
+        <li><h3>Message us</h3><p>Tell us on WhatsApp or by phone what you'd like help with.</p></li>
+        <li><h3>Free 20-minute consultation</h3><p>Meet a founder in the studio or online. We ask about your health, routine and goals.</p></li>
+        <li><h3>Your personal plan</h3><p>We suggest the right batch or private sessions, and you start when you're ready.</p></li>
+      </ol>
+      <p class="steps-cta">
+        <a class="button" href="https://wa.me/919823203407?text=Hi%20NrutyaAsana%2C%20I%27d%20like%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Book a free consultation</a>
+      </p>
+    </div>
+  </section>
+
+  <!-- 9. Timetable (SAMPLE: replace with real batches) -->
+  <section class="band band--deep timetable-band" id="timetable" aria-labelledby="timetable-title">
+    <div class="wrap">
+      <h2 class="heading" id="timetable-title">Weekly timetable</h2>
+      <p class="intro">Small batches, so every student gets attention.</p>
+      <table class="timetable">
+        <caption class="visually-hidden">Weekly batches with days, times and where they run</caption>
+        <thead><tr><th scope="col">Batch</th><th scope="col">Days</th><th scope="col">Time</th><th scope="col">Where</th></tr></thead>
+        <tbody>
+          <tr><th scope="row">Morning therapy yoga</th><td data-label="Days">Mon, Wed, Fri</td><td data-label="Time">7:00 – 8:00 am</td><td data-label="Where">Studio</td></tr>
+          <tr><th scope="row">Women's health batch</th><td data-label="Days">Tue, Thu</td><td data-label="Time">10:30 – 11:30 am</td><td data-label="Where">Studio</td></tr>
+          <tr><th scope="row">Dance therapy</th><td data-label="Days">Tue, Thu, Sat</td><td data-label="Time">6:00 – 7:00 pm</td><td data-label="Where">Studio</td></tr>
+          <tr><th scope="row">Evening yoga therapy</th><td data-label="Days">Mon, Wed, Fri</td><td data-label="Time">7:15 – 8:15 pm</td><td data-label="Where">Studio and online</td></tr>
+          <tr><th scope="row">Private sessions</th><td data-label="Days">By appointment</td><td data-label="Time">Flexible</td><td data-label="Where">Studio or online</td></tr>
+        </tbody>
+      </table>
+      <p class="timetable-note">Fees depend on the program and are shared at your free consultation.</p>
+    </div>
+  </section>
+</main>
+
+<!-- 10. Contact (map points to the Kalyaninagar area; swap in the studio's exact Google Maps link when available. Hours are SAMPLE) -->
+<footer class="band contact" id="contact" aria-labelledby="contact-title">
+  <div class="wrap">
+    <h2 class="heading" id="contact-title">Healing begins with one mindful step</h2>
+    <div class="actions">
+      <a class="button" href="https://wa.me/919823203407?text=Hi%20NrutyaAsana%2C%20I%27d%20like%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>Book a free consultation</a>
+      <a class="button button--ghost" href="tel:+919823203407"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call +91 98232 03407</a>
+    </div>
+    <div class="contact-grid">
+      <div>
+        <h3>Contact us</h3>
+        <address>
+          <ul class="contact-list">
+            <li><img src="assets/icons/ic-phone-muted.svg" alt="Phone"><span><a class="nowrap" href="tel:+919823203407">+91 98232 03407</a> / <a class="nowrap" href="tel:+918208185535">+91 82081 85535</a></span></li>
+            <li><img src="assets/icons/ic-mail-muted.svg" alt="Email"><a href="mailto:connect.nrityaasana@gmail.com">connect.nrityaasana@gmail.com</a></li>
+            <li><img src="assets/icons/ic-web-muted.svg" alt="Website"><a href="https://www.nrityaasana.com">www.nrityaasana.com</a></li>
+            <li><img src="assets/icons/ic-pin-muted.svg" alt="Address"><a href="https://www.google.com/maps/search/?api=1&amp;query=Kalyani+Nagar+Pune" target="_blank" rel="noopener">Kalyaninagar, Pune, Maharashtra, India</a></li>
+          </ul>
+        </address>
+        <h3 class="hours-title">Opening hours</h3>
+        <dl class="hours">
+          <dt>Mon – Sat</dt><dd>6:30 am – 8:30 pm</dd>
+          <dt>Sunday</dt><dd>Closed (private sessions by appointment)</dd>
+        </dl>
+      </div>
+      <div>
+        <div class="map">
+          <iframe title="Map of Kalyaninagar, Pune" src="https://www.google.com/maps/embed?origin=mfe&amp;pb=!1m3!2m1!1sKalyani+Nagar,+Pune!6i14" loading="lazy" referrerpolicy="no-referrer-when-downgrade"></iframe>
+        </div>
+        <a class="map-link" href="https://www.google.com/maps/search/?api=1&amp;query=Kalyani+Nagar+Pune" target="_blank" rel="noopener">Get directions in Google Maps</a>
+      </div>
+    </div>
+    <div class="signature">
+      <img src="assets/icons/logo-mark.svg" alt="">
+      <p>NrutyaAsana</p>
+      <ul aria-label="Dance, Yoga, Culture"><li>Dance</li><li>Yoga</li><li>Culture</li></ul>
+    </div>
+    <p class="fineprint">© 2026 NrutyaAsana, Pune</p>
+  </div>
+</footer>
+
+<!-- Phone-only action bar -->
+<nav class="actionbar" aria-label="Quick actions">
+  <a href="tel:+919823203407"><svg aria-hidden="true"><use href="#i-phone"/></svg>Call</a>
+  <a class="is-primary" href="https://wa.me/919823203407?text=Hi%20NrutyaAsana%2C%20I%27d%20like%20to%20book%20a%20free%20consultation." target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-wa"/></svg>WhatsApp</a>
+  <a href="https://www.google.com/maps/search/?api=1&amp;query=Kalyani+Nagar+Pune" target="_blank" rel="noopener"><svg aria-hidden="true"><use href="#i-pin"/></svg>Directions</a>
+</nav>
+
+<script>
+  // SAMPLE program details: replace with the founders' real descriptions.
+  const PROGRAMS = {
+    pcos:      { name: "PCOS", summary: "Gentle, hormone-friendly yoga, breathwork and dance movement to support regular cycles, steady energy and a calmer mood.", includes: "Includes hip-opening asanas, pranayama, rhythmic dance sequences and lifestyle guidance.", length: "Runs for 8 weeks, 3 sessions a week." },
+    thyroid:   { name: "Thyroid", summary: "Neck and chest postures, breathing practices and steady movement to support energy and metabolism.", includes: "Includes shoulder-stand preparations, ujjayi breathing and deep relaxation.", length: "Runs for 8 weeks, 3 sessions a week." },
+    diabetes:  { name: "Diabetes", summary: "Regular, moderate movement and twisting postures that support blood-sugar management alongside your treatment.", includes: "Includes twists, forward bends, brisk dance routines and mindful-eating guidance.", length: "Runs for 12 weeks, 3 sessions a week." },
+    backpain:  { name: "Back Pain", summary: "Careful strengthening and mobility work for the spine, adapted to your pain level on the day.", includes: "Includes core strengthening, gentle backbends and posture correction.", length: "Runs for 6 weeks, 2 to 3 sessions a week." },
+    stress:    { name: "Stress Management", summary: "Expressive dance to release tension, then slow yoga and guided relaxation to settle the mind.", includes: "Includes free movement, restorative poses and yoga nidra.", length: "Runs for 6 weeks, 2 sessions a week." },
+    anxiety:   { name: "Anxiety", summary: "Grounding movement and calming breath practices that help you feel safe and steady in your body.", includes: "Includes grounding poses, alternate-nostril breathing and rhythm-based dance.", length: "Runs for 8 weeks, 2 sessions a week." },
+    arthritis: { name: "Arthritis", summary: "Low-impact, joint-friendly movement to ease stiffness and keep you mobile.", includes: "Includes chair-supported asanas, gentle joint rotations and slow dance.", length: "Runs for 8 weeks, 3 sessions a week." },
+    women:     { name: "Women's Health", summary: "Support through every stage of life: menstrual health, recovery after pregnancy and menopause.", includes: "Includes pelvic-floor work, hormone-balancing sequences and community dance.", length: "Ongoing monthly batches." }
+  };
+  const WA = "https://wa.me/919823203407?text=";
+  const panel = document.getElementById("program-panel");
+  const field = (name) => panel.querySelector('[data-field="' + name + '"]');
+  const buttons = document.querySelectorAll(".condition");
+
+  buttons.forEach((btn) => {
+    btn.addEventListener("click", () => {
+      const p = PROGRAMS[btn.dataset.program];
+      buttons.forEach((b) => b.setAttribute("aria-expanded", String(b === btn)));
+      field("name").textContent = p.name;
+      field("summary").textContent = p.summary;
+      field("includes").textContent = p.includes;
+      field("length").textContent = p.length;
+      const cta = field("cta");
+      cta.href = WA + encodeURIComponent("Hi NrutyaAsana, I'd like to know about your " + p.name + " program.");
+      cta.querySelector("span").textContent = "Ask about " + p.name + " on WhatsApp";
+      panel.classList.remove("is-changing");
+      void panel.offsetWidth; // restart the fade
+      panel.classList.add("is-changing");
+    });
+  });
+</script>
+</body>
+</html>
